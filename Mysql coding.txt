@@ -1,0 +1,42 @@
+create database hospital;
+
+use hospital;
+
+create table staff
+(staff_id integer(10) primary key,
+name varchar(25),
+age integer(3),
+designation varchar(15),
+specialisation varchar(40),
+qualification varchar(20),
+address varchar(50),
+residence_phone varchar(25),
+mobile_phone varchar(25),
+gender varchar(7));
+
+create table bill
+(bill_no integer(10) primary key,
+bill_date date,
+admit_no integer(10),
+no_of_days integer(3),
+type_of_room varchar(12),
+room_charges integer(10),
+food_charges integer(10),
+x_ray integer(10),
+blood_test integer(10),
+sugar_test integer(10),
+ecg integer(10),
+other_charges integer(10),
+total integer(10));
+
+create table patient
+(admit_no integer(10) primary key,
+admit_date date,
+patient_name varchar(25),
+gender varchar(7),
+age integer(3),
+disease varchar(20),
+doctor_treating varchar(25),
+ward varchar(8),
+bed_no varchar(10),
+discharge_date date);
